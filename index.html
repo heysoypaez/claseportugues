@@ -10,6 +10,24 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/header.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/layout-section.css">
 
+	<!-- Event snippet for Boton Flotante de Whatsapp conversion page
+	In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+	<script>
+	function gtag_report_conversion(url) {
+	  var callback = function () {
+	    if (typeof(url) != 'undefined') {
+	      window.location = url;
+	    }
+	  };
+	  gtag('event', 'conversion', {
+	      'send_to': 'AW-1014697950/nWywCPPZ98IBEN6f7OMD',
+	      'event_callback': callback
+	  });
+	  return false;
+	}
+	</script>
+
+
 	<!-- Global site tag (gtag.js) - Google Ads: 1014697950 -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1014697950"></script>
 	<script>
@@ -251,7 +269,7 @@
 
 	<section class="whatsapp-button">
 		<figure class="whatsapp-button__container">
-			<a href="https://wa.me/56987572595" target="_blank">
+			<a href="https://wa.me/56987572595" target="_blank" onclick="gtag_report_conversion()"> 
 				<img src="assets/img/whatsapp-logo-1.png" alt="botón de Whatsapp" width="80" class="whatsapp-button__image">
 			</a>
 		</figure>
