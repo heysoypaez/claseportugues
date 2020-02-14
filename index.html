@@ -10,31 +10,66 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/header.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/layout-section.css">
 
-	<!-- Event snippet for Boton Flotante de Whatsapp conversion page
-	In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-	<script>
-	function gtag_report_conversion(url) {
-	  var callback = function () {
-	    if (typeof(url) != 'undefined') {
-	      window.location = url;
-	    }
-	  };
-	  gtag('event', 'conversion', {
-	      'send_to': 'AW-1014697950/nWywCPPZ98IBEN6f7OMD',
-	      'event_callback': callback
-	  });
-	  return false;
-	}
-	</script>
-
 
 	<!-- Global site tag (gtag.js) - Google Ads: 1014697950 -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1014697950"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1014697950"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); </script>
+
+	<!-- Event snippet for Boton Flotante de Whatsapp conversion page
+	In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+	<script> function gtag_report_conversion(url) {var callback = function () {if (typeof(url) != 'undefined') {window.location = url; } }; gtag('event', 'conversion', {'send_to': 'AW-1014697950/nWywCPPZ98IBEN6f7OMD', 'event_callback': callback }); return false; } </script>
+
+<!-- Event snippet for Click Telefono celular Header conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion_cell_phone_header(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-1014697950/lBPOCI_e98IBEN6f7OMD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
+<!-- Event snippet for Click Telefono fijo conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion_phone_header(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-1014697950/C-P2CPXvh8MBEN6f7OMD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+<!-- Event snippet for Click Correo Electronico Header conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion_email_header(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-1014697950/VH4BCPvh98IBEN6f7OMD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 	</head>
 
 <body>
@@ -47,8 +82,8 @@
 		</section>
 		<section class="header__item header__item-3">
 			<ul>
-				<li>  <img src="assets/icons/phone-solid.svg" width="24px" height="24px" /><a href="tel:+56987572595">+56987572595</a>/ <a href="tel:223780015">223780015</a> </li>
-				<li>  <img src="assets/icons/envelope-solid.svg" /> <a href="mailto:info@smoothtalkers.cl">info@smoothtalkers.cl </a></li>
+				<li>  <img src="assets/icons/phone-solid.svg" width="24px" height="24px" /><a onclick="return gtag_report_conversion_cell_phone_header('tel:+56987572595')" href="tel:+56987572595">+56987572595</a>/ <a onclick="return gtag_report_conversion_phone_header('tel:223780015')" href="tel:223780015">223780015</a> </li>
+				<li>  <img src="assets/icons/envelope-solid.svg" /> <a onclick="return gtag_report_conversion_email_header('mailto:info@smoothtalkers.cl')" href="mailto:info@smoothtalkers.cl">info@smoothtalkers.cl </a></li>
 			</ul>
 		</section>
 	</header>
@@ -269,7 +304,7 @@
 
 	<section class="whatsapp-button">
 		<figure class="whatsapp-button__container">
-			<a href="#" onclick="gtag_report_conversion('https://wa.me/56987572595')"> 
+			<a href="#" onclick="return gtag_report_conversion('https://wa.me/56987572595')"> 
 				<img src="assets/img/whatsapp-logo-1.png" alt="botón de Whatsapp" width="80" class="whatsapp-button__image">
 			</a>
 		</figure>
